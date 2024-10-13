@@ -31,10 +31,14 @@ func NewRouter(c *Config) *Router {
 
 func (r *Router) setRouting() {
 	userController := controllers.NewUserController()
+
 	r.echo.GET("/", func(c echo.Context) error {
 		return c.String(http.StatusOK, "Hello, World!")
 	})
 	r.echo.GET("/users", func(c echo.Context) error {
+		return userController.GetList(c)
+	})
+	r.echo.GET("/users/:id", func(c echo.Context) error {
 		return userController.Get(c)
 	})
 }

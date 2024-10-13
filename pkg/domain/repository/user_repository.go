@@ -1,6 +1,8 @@
 package repository
 
+import "github.com/takeuchi-shogo/go-clean-ddd/pkg/domain/model"
+
 type UserRepository interface {
 	Find()
-	FindByID()
+	FindByID(id int) (*model.User, error)
 }
