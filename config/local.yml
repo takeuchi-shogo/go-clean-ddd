@@ -1,0 +1,9 @@
+database:
+  host: mysql
+  user_name: root
+  password: password
+  database_name: clean_ddd
+server:
+  port: 8081
+  read_timeout: 5s
+  write_timeout: 10s
