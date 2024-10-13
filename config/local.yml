@@ -1,8 +1,13 @@
 database:
-  host: mysql
+  host: localhost
   user_name: root
   password: password
   database_name: clean_ddd
+  port: 33071
+dbms: mysql
+max_idle_conn: 100
+max_open_conn: 10
+max_life_time: 10s
 server:
   port: 8081
   read_timeout: 5s

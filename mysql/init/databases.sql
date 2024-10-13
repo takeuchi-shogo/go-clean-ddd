@@ -1,0 +1,2 @@
+CREATE DATABASE IF NOT EXISTS `clean_ddd`;
+CREATE DATABASE IF NOT EXISTS `clean_ddd_test`;

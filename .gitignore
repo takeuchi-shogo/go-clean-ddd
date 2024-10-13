@@ -1,5 +1,6 @@
 production.yml
 
+/bin
 /tmp/*
 
 !.gitkeep

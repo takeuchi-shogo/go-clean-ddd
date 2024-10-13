@@ -1,0 +1,33 @@
+version: '3'
+
+tasks:
+  build:
+    cmds:
+      - go build -o bin/migrate cmd/migrate/main.go
+
+  migrate:
+    cmds:
+      - bin/migrate -migration-dir=migrations -seed-dir=seeds
+
+  docker:up:
+    cmds:
+      - docker compose up -d
+
+  docker:down:
+    cmds:
+      - docker compose down
+
+  docker:rm:
+    cmds:
+      - docker compose rm
+
+  setup:
+    cmds:
+      - task: docker:up
+      - task: build
+      - task: migrate
+
+  clean:
+    cmds:
+      - task: docker:down
+      - rm -rf bin
