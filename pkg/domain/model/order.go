@@ -3,11 +3,10 @@ package model
 import valueobject "github.com/takeuchi-shogo/go-clean-ddd/pkg/domain/value_object"
 
 type (
-	Product struct {
-		ID    valueobject.ID
-		Title Title
+	Order struct {
+		ID      valueobject.ID
+		UserID  valueobject.ID
+		Product Product
 	}
-	Title string
-
-	ProductList []Product
+	OrderList []Order
 )

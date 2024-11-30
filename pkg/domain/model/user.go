@@ -8,5 +8,6 @@ type (
 		FirstName valueobject.FirstName
 		LastName  valueobject.LastName
 		Email     valueobject.Email
+		Orders    OrderList
 	}
 )
