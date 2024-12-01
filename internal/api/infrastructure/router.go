@@ -44,5 +44,7 @@ func (r *Router) setRouting() {
 }
 
 func (r Router) Run() {
-	r.echo.Start(fmt.Sprintf(":%s", r.port))
+	if err := r.echo.Start(fmt.Sprintf(":%s", r.port)); err != nil {
+		panic(err)
+	}
 }
